@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PruebaTime.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace PruebaTime
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

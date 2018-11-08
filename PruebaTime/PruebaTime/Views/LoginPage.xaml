@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaTime.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="background900">
+    <ContentPage.Content>
+        <StackLayout Opacity="0.8"
+                     Padding="8">
+            <StackLayout>
+                <Image Source="login256"
+                       HeightRequest="100"
+                       HorizontalOptions="Center"/>
+                <Label Text="Usuario"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Font="15"/>
+                <Entry Placeholder="Usuario"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Medium"/>
+                <Label Text="Contraseña"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Font="15"/>
+                <Entry Placeholder="Contraseña"
+                       HorizontalOptions="FillAndExpand"
+                       TextColor="Black"
+                       BackgroundColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       IsPassword="True"/>
+                <ActivityIndicator Color="Red"/>
+                <Button Text="Iniciar Sesión"
+                        TextColor="White"
+                        BackgroundColor="Black"
+                        BorderColor="Red"
+                        BorderRadius="2"
+                        HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
