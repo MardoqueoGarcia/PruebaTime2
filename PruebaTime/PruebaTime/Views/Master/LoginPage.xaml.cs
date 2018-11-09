@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PruebaTime.Views
+namespace PruebaTime.Views.Master
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class InformationUserPage : ContentPage
+	public partial class LoginPage : ContentPage
 	{
-		public InformationUserPage ()
+		public LoginPage ()
 		{
 			InitializeComponent ();
 		}

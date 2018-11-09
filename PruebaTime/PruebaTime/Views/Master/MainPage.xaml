@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="PruebaTime.Views.Master.MainPage"
+                  xmlns:local="clr-namespace:PruebaTime.Views.Master"
+                  NavigationPage.HasNavigationBar="False"
+                  BackgroundImage="backgroundmenu436.png">
+    
+    <!--Menu de nuestra master-->
+    <MasterDetailPage.Master>
+        <local:MenuPage BackgroundColor="#22333E"/>
+    </MasterDetailPage.Master>
+    
+    <!--Pagina de detalle-->
+    <MasterDetailPage.Detail>
+        <NavigationPage x:Name="Navigator">
+            <x:Arguments>
+                <local:InicioPage/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

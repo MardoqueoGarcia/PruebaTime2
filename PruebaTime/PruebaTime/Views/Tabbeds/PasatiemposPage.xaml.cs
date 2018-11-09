@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PruebaTime.Views
+namespace PruebaTime.Views.Tabbeds
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class PasatiemposPage : ContentPage
 	{
-		public LoginPage ()
+		public PasatiemposPage ()
 		{
 			InitializeComponent ();
 		}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PruebaTime.ViewModel
+namespace PruebaTime.ViewModel.MasterViewModel
 {
     public class LoginViewModel
     {

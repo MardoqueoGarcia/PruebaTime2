@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PruebaTime.Views
+namespace PruebaTime.Views.Master
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DatosPersonalesPage : ContentPage
+	public partial class MenuPage : ContentPage
 	{
-		public DatosPersonalesPage ()
+		public MenuPage ()
 		{
 			InitializeComponent ();
 		}
