@@ -29,7 +29,21 @@ namespace PruebaTime.ViewModel.MasterViewModel
             get;
             set;
         }
+
+        //Instancia de nuestros chistes
+        public ChistesViewModel Chistes
+        {
+            get;
+            set;
+        }
         #endregion
+
+        //Instancia de nuestro buscador
+        public SearchViewModel Search
+        {
+            get;
+            set;
+        }
 
         #region Constructor
         public SingletonViewModel()
@@ -41,6 +55,8 @@ namespace PruebaTime.ViewModel.MasterViewModel
             this.Login = new LoginPage();
             this.Menu = new MainPageViewModel();
             this.Inicio = new InicioPage();
+            this.Chistes = new ChistesViewModel();
+            this.Search = new SearchViewModel();
 
         }
         #endregion

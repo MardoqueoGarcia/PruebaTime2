@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaTime.Views.SearchPage"
+             NavigationPage.HasNavigationBar="False"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Search}"
+                     Orientation="Vertical">
+            
+            <!--Buscador-->
+            <StackLayout Padding="3"
+                         Orientation="Horizontal"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Start"
+                         BackgroundColor="#22333E">
+                <Button Image="ic_atras.png"
+                        BackgroundColor="#22333E"
+                        TextColor="White"
+                        HeightRequest="30"
+                        HorizontalOptions="StartAndExpand"
+                        Command="{Binding VolverCommand}"/>
+                <SearchBar Placeholder="Buscar chistes"
+                           BackgroundColor="White"
+                           SearchCommand="{Binding SearchCommand}"
+                           Text="{Binding Filter, Mode=TwoWay}"
+                           HorizontalOptions="Fill"
+                           PlaceholderColor="Black"
+                           TextColor="Black"/>
+
+            </StackLayout>
+            
+            <!--Presentacion de datos-->
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Padding="5">
+                <Label Text="Error, No hay datos disponibles."
+                       TextColor="Red"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

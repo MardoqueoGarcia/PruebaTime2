@@ -2,9 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaTime.Views.ChistesPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Chistes">
+    <!--Toolbar de navegacion-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_buscador" 
+                     Command="{Binding SearchCommand}"
+                     BindingContext="{Binding Chistes}"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BindingContext="{Binding Chistes}">
             <Label Text="Estas en los chistes"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
