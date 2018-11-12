@@ -6,7 +6,9 @@
              BindingContext="{Binding Singleton, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Search}"
-                     Orientation="Vertical">
+                     Orientation="Vertical"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill">
             
             <!--Buscador-->
             <StackLayout Padding="3"
@@ -20,7 +22,7 @@
                         HeightRequest="30"
                         HorizontalOptions="StartAndExpand"
                         Command="{Binding VolverCommand}"/>
-                <SearchBar Placeholder="Buscar chistes"
+                <SearchBar Placeholder="Buscar por categoria"
                            BackgroundColor="White"
                            SearchCommand="{Binding SearchCommand}"
                            Text="{Binding Filter, Mode=TwoWay}"
@@ -31,14 +33,35 @@
             </StackLayout>
             
             <!--Presentacion de datos-->
-            <StackLayout HorizontalOptions="Center"
-                         VerticalOptions="Center"
-                         Padding="5">
-                <Label Text="Error, No hay datos disponibles."
-                       TextColor="Red"
-                       FontAttributes="Bold"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"/>
+            <StackLayout HorizontalOptions="Fill"
+                         VerticalOptions="Fill"
+                         Padding="5,5,5,0">
+                <ListView ItemsSource="{Binding Chistes}"
+                          SeparatorColor="Black"
+                          HasUnevenRows="True"
+                          Margin="5"
+                          IsVisible="{Binding IsVisibleList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Chiste}"
+                                           TextColor="Black"
+                                           Font="12"
+                                           Grid.Row="0"
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           LineBreakMode="WordWrap"
+                                           Margin="6"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

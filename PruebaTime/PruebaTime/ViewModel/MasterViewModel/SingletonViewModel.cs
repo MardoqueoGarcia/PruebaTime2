@@ -1,4 +1,6 @@
-﻿using PruebaTime.Views.Master;
+﻿using PruebaTime.Models;
+using PruebaTime.Repository;
+using PruebaTime.Views.Master;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +10,21 @@ namespace PruebaTime.ViewModel.MasterViewModel
     public class SingletonViewModel
     {
         #region Instancias de los ViewModels
+
+        //Lista de categoria de chistes
+        public List<ChistesModel> ChistesListt
+        {
+            get;
+            set;
+        }
+
+        //Lista de todos los chistes
+        public List<ListChistesModel> GetList
+        {
+            get;
+            set;
+        }
+
 
         //Instancia de nuestro Menú
         public MainPageViewModel Menu
@@ -36,7 +53,13 @@ namespace PruebaTime.ViewModel.MasterViewModel
             get;
             set;
         }
-        #endregion
+
+        //Instancia de nuestro buscador
+        public ChistesRepository Repository
+        {
+            get;
+            set;
+        }
 
         //Instancia de nuestro buscador
         public SearchViewModel Search
@@ -44,6 +67,8 @@ namespace PruebaTime.ViewModel.MasterViewModel
             get;
             set;
         }
+        #endregion
+
 
         #region Constructor
         public SingletonViewModel()
@@ -57,6 +82,7 @@ namespace PruebaTime.ViewModel.MasterViewModel
             this.Inicio = new InicioPage();
             this.Chistes = new ChistesViewModel();
             this.Search = new SearchViewModel();
+            this.Repository = new ChistesRepository();
 
         }
         #endregion

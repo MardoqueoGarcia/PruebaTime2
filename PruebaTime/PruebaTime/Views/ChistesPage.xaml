@@ -11,11 +11,53 @@
                      BindingContext="{Binding Chistes}"/>
     </ContentPage.ToolbarItems>
     
+    <!--Diccionario de Diseño Compartido-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="CategoryStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="Font" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <!--Diseño de la pagina-->
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Chistes}">
-            <Label Text="Estas en los chistes"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BindingContext="{Binding Chistes}"
+                     Padding="3"
+                     VerticalOptions="Fill">
+            <Label Text="Chistes de:"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Font="16"/>
+            
+            <!--Inicio de categoria de chistes-->
+            <ListView Margin="5,5,5,0"
+                      ItemsSource="{Binding Chistes}"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Style="{StaticResource CategoryStyle}"
+                                       Text="{Binding Category}"/>
+                                <Label Text="Ir"
+                                       HorizontalOptions="EndAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       TextColor="Blue"
+                                       FontAttributes="Italic"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

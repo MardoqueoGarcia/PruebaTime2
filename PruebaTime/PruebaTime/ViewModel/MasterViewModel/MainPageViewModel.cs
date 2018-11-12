@@ -54,6 +54,13 @@ namespace PruebaTime.ViewModel.MasterViewModel
 
             Menu.Add(new MenuPageViewModel
             {
+                Icon = "ic_calculator.png",
+                PageName = "CalculatorPage",
+                Title = "Calculadora"
+            });
+
+            Menu.Add(new MenuPageViewModel
+            {
                 Icon = "ic_settings.png",
                 PageName = "SettingsPage",
                 Title = "Configuración"

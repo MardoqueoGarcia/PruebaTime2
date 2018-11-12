@@ -50,6 +50,10 @@ namespace PruebaTime.ViewModel.MasterViewModel
                     App.Master.Detail = new NavigationPage(new ChistesPage());
                     break;
 
+                case "CalculatorPage":
+                    App.Master.Detail = new NavigationPage(new CalculatorPage());
+                    break;
+
                 case "SettingsPage":
                     App.Master.Detail = new NavigationPage(new SettingsPage());
                     break;
