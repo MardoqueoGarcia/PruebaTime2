@@ -37,24 +37,37 @@
             
             <!--Inicio de categoria de chistes-->
             <ListView Margin="5,5,5,0"
-                      ItemsSource="{Binding Chistes}"
+                      ItemsSource="{Binding GroupedData}"
                       HasUnevenRows="True"
-                      SeparatorColor="Black">
+                      SeparatorColor="Black"
+                      IsGroupingEnabled="True"
+                      GroupDisplayBinding="{Binding Key}"
+                      Footer="{Binding}">
+                
+                <!--Los items(chistes)-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Style="{StaticResource CategoryStyle}"
-                                       Text="{Binding Category}"/>
-                                <Label Text="Ir"
-                                       HorizontalOptions="EndAndExpand"
-                                       VerticalOptions="CenterAndExpand"
-                                       TextColor="Blue"
-                                       FontAttributes="Italic"/>
+                                       Text="{Binding Chiste}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                
+                <!--Foother-->
+                <ListView.FooterTemplate>
+                    <DataTemplate>
+                        <ContentView BackgroundColor="Aquamarine">
+                            <Label Margin="8"
+                                   HorizontalOptions="CenterAndExpand"
+                                   Text="{Binding ChistesAccount, StringFormat='Chistes : {0}'}"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"/>
+                        </ContentView>
+                    </DataTemplate>
+                </ListView.FooterTemplate>
             </ListView>
             
             
