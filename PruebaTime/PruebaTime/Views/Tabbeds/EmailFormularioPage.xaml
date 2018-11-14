@@ -21,41 +21,15 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <!--Inicio del formulario-->
-            <!--Destinatario-->
-            <Label Text="Para"
-                   HorizontalOptions="StartAndExpand"
-                   Grid.Row="0"
-                   Grid.Column="0"/>
-            <Entry Placeholder="Correo"
-                   PlaceholderColor="Black"
-                   Keyboard="Email"
-                   IsEnabled="False"
-                   Text="{Binding Correo}"
-                   HorizontalOptions="Fill"
-                   Grid.Row="0"
-                   Grid.Column="1"/>
             <!--Asunto-->
-            <Label Text="Asunto"
-                   HorizontalOptions="StartAndExpand"
-                   Grid.Row="1"
-                   Grid.Column="0"/>
-            <Editor HorizontalOptions="Fill"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="{Binding Asunto}"
-                    MaxLength="20"/>
-            <!--Mensaje-->
-            <Label Text="Mensaje"
-                   HorizontalOptions="StartAndExpand"
-                   Grid.Row="2"
-                   Grid.Column="0"/>
-            <Editor MaxLength="100"
-                    HorizontalOptions="Fill"
-                    Text="{Binding Mensaje}"
-                    Grid.Row="2"
-                    Grid.Column="1"/>
+            <Label Text="Desea redactar mensaje a este correo?"
+                   Font="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
             <!--Botones-->
             <Button Text="Cancelar"
                     TextColor="White"
@@ -63,7 +37,7 @@
                     BorderRadius="3"
                     HorizontalOptions="CenterAndExpand"
                     Command="{Binding CancelarCommand}"
-                    Grid.Row="3"
+                    Grid.Row="1"
                     Grid.Column="0"/>
             <Button Text="Enviar"
                     TextColor="White"
@@ -71,7 +45,7 @@
                     BorderRadius="3"
                     HorizontalOptions="CenterAndExpand"
                     Command="{Binding EnviarCommand}"
-                    Grid.Row="3"
+                    Grid.Row="1"
                     Grid.Column="1"/>
         </Grid>
     </StackLayout>

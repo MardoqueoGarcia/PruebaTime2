@@ -15,18 +15,20 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
             <!--Alerta-->
-            <Label Text="Que accion desea realiazar?"
+            <Label Text="Que acción desea realiazar?"
+                   Font="20"
                    TextColor="Black"
                    FontAttributes="Bold"
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="StartAndExpand"
-                   Grid.ColumnSpan="2"
+                   Grid.ColumnSpan="3"
                    Grid.Row="0"/>
             <!--Botones de acciones-->
             <Button Text="Llamar"
@@ -49,14 +51,14 @@
                     Grid.Row="1"/>
             <!--Boton para cancelar-->
             <Button Text="Cancelar"
-                    HorizontalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     BorderRadius="3"
                     VerticalOptions="EndAndExpand"
                     BackgroundColor="Red"
                     TextColor="White"
                     Command="{Binding CancelarCommand}"
-                    Grid.ColumnSpan="2"
-                    Grid.Row="2"/>
+                    Grid.Column="2"
+                    Grid.Row="1"/>
 
         </Grid>
     </StackLayout>

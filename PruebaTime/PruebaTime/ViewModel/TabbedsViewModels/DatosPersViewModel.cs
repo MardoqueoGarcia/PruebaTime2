@@ -70,6 +70,9 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
         public async void Llamar()
         {
             //Para llamar al popup
+
+            SingletonViewModel.GetInstance().Tel_Number = new Tel_NumberViewModel();
+
             await PopupNavigation.PushAsync(new Tel_NumerPopupPage());
             
         }

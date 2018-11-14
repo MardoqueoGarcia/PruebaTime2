@@ -12,23 +12,10 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
     public class EmailFormularioViewModel : BaseViewModel
     {
         #region Attributes
-        private string asunto;
-        private string mensaje;
         private string correo;
         #endregion
 
         #region Properties
-        public string Asunto
-        {
-            get { return asunto; }
-            set { SetValue(ref asunto, value); }
-        }
-
-        public string Mensaje
-        {
-            get { return mensaje; }
-            set { SetValue(ref mensaje, value); }
-        }
 
         public string Correo
         {
@@ -66,18 +53,16 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
         public async void Enviar()
         {
             Correo = "mardoqueogarcia112016@gmail.com";
+            
+                var EmailMsj = CrossMessaging.Current.EmailMessenger;
 
-            var EmailMsj = CrossMessaging.Current.EmailMessenger;
-
-            if (EmailMsj.CanSendEmail)
-            {
-                EmailMsj.SendEmail
-                 (
-                   Correo,
-                   Asunto, 
-                   Mensaje);
-            }
-
+                if (EmailMsj.CanSendEmail)
+                {
+                    EmailMsj.SendEmail
+                     (
+                       Correo);
+                }
+            
             await PopupNavigation.PopAsync();
         }
         #endregion

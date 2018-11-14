@@ -38,6 +38,7 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
         #endregion
 
         #region Methods
+        //Realizar llamda
         public async void Llamar()
         {
             var number = "(+503)76844206";
@@ -51,6 +52,7 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
 
         }
 
+        //enviar mensaje de texo
         public async void Mensaje()
         {
 
@@ -65,6 +67,7 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
             await PopupNavigation.PopAsync();
         }
 
+        //Cancelar accion
         public async void Cancelar()
         {
             await PopupNavigation.PopAsync();
