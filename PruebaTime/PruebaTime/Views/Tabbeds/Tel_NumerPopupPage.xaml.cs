@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace PruebaTime.Views.Tabbeds
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DatosPersonalesPage : ContentPage
-	{
-		public DatosPersonalesPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Tel_NumerPopupPage
+    {
+        public Tel_NumerPopupPage()
+        {
+            InitializeComponent();
+        }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using PruebaTime.Models;
 using PruebaTime.Repository;
+using PruebaTime.Repository.ChistesVM;
+using PruebaTime.ViewModel.ChistesVM;
+using PruebaTime.ViewModel.TabbedsViewModels;
 using PruebaTime.Views.Master;
 using System;
 using System.Collections.Generic;
@@ -33,13 +36,6 @@ namespace PruebaTime.ViewModel.MasterViewModel
             set;
         }
 
-        //Instancia de nuestra pagina de detalle
-        public InicioPage Inicio
-        {
-            get;
-            set;
-        }
-
         //Instancia de nuestro Login
         public LoginPage Login
         {
@@ -67,6 +63,23 @@ namespace PruebaTime.ViewModel.MasterViewModel
             get;
             set;
         }
+
+        //Instancia de las Paginas de las tabbed
+        public DatosPersViewModel DatosPersonales
+        {
+            get;
+            set;
+        }
+        public EmailFormularioViewModel Email_Formulario
+        {
+            get;
+            set;
+        }
+        public Tel_NumberViewModel Tel_Number
+        {
+            get;
+            set;
+        }
         #endregion
 
 
@@ -79,8 +92,6 @@ namespace PruebaTime.ViewModel.MasterViewModel
 
             this.Login = new LoginPage();
             this.Menu = new MainPageViewModel();
-            this.Inicio = new InicioPage();
-            this.Chistes = new ChistesViewModel();
             this.Search = new SearchViewModel();
             this.Repository = new ChistesRepository();
 

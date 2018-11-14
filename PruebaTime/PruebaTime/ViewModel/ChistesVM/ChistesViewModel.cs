@@ -1,6 +1,6 @@
 ﻿using PruebaTime.Models;
 using PruebaTime.Repository;
-using PruebaTime.Repository.ChistesViewModel;
+using PruebaTime.Repository.ChistesVM;
 using PruebaTime.ViewModel.MasterViewModel;
 using PruebaTime.Views;
 using System;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace PruebaTime.ViewModel.ChistesViewModel
+namespace PruebaTime.ViewModel.ChistesVM
 {
     public class ChistesViewModel : BaseViewModel
     {
@@ -25,8 +25,8 @@ namespace PruebaTime.ViewModel.ChistesViewModel
         #endregion
 
         #region Attributes
-        private List<ListChistesModel> listChistes { get; set; }
-        private int chistesAccount { get; set; }
+        private List<ListChistesModel> listChistes;
+        private int chistesAccount;
         #endregion
 
         #region Properties

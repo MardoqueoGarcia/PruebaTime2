@@ -41,6 +41,8 @@
                           HasUnevenRows="True"
                           Margin="5"
                           IsVisible="{Binding IsVisibleList}">
+                    
+                    <!--Los items(Chistes)-->
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

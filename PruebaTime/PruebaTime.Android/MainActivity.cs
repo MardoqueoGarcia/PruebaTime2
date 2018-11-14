@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace PruebaTime.Droid
 {
@@ -20,6 +21,9 @@ namespace PruebaTime.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+            //Para que el popup funcione correctamente
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
         }
     }
 }

@@ -9,9 +9,12 @@
             <Frame OutlineColor="Black"
                    BorderColor="Black"
                    CornerRadius="2"
+                   WidthRequest="200"
+                   HeightRequest="80"
+                   Margin="1"
                    HorizontalOptions="Center">
                 <Image Source="pasatiempos.png"
-                       HeightRequest="100"
+                       HeightRequest="80"
                        HorizontalOptions="FillAndExpand"/>
             </Frame>
         </StackLayout>

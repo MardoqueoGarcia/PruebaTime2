@@ -1,4 +1,6 @@
-﻿using PruebaTime.Views;
+﻿using PruebaTime.ViewModel.ChistesVM;
+using PruebaTime.ViewModel.TabbedsViewModels;
+using PruebaTime.Views;
 using PruebaTime.Views.Master;
 using PruebaTime.Views.Tabbeds;
 using System;
@@ -43,10 +45,14 @@ namespace PruebaTime.ViewModel.MasterViewModel
                     break;
 
                 case "HomeTabbedPage":
+                    //Instanciamos los datos
+                    SingletonViewModel.GetInstance().DatosPersonales = new DatosPersViewModel();
                     App.Master.Detail = new NavigationPage(new HomeTabbedPage());
                     break;
 
                 case "ChistesPage":
+                    //Instanciamos el ViewModel
+                    SingletonViewModel.GetInstance().Chistes = new ChistesViewModel();
                     App.Master.Detail = new NavigationPage(new ChistesPage());
                     break;
 

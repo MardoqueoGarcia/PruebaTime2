@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="PruebaTime.Views.Tabbeds.EmailFormularioPage"
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 BindingContext="{Binding Singleton, Source={StaticResource Locator}}">
+
+    <StackLayout BackgroundColor="White"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand"
+                 Padding="0"
+                 BindingContext="{Binding Email_Formulario}">
+
+        <Grid Padding="8"
+              HorizontalOptions="CenterAndExpand"
+              VerticalOptions="StartAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Inicio del formulario-->
+            <!--Destinatario-->
+            <Label Text="Para"
+                   HorizontalOptions="StartAndExpand"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry Placeholder="Correo"
+                   PlaceholderColor="Black"
+                   Keyboard="Email"
+                   IsEnabled="False"
+                   Text="{Binding Correo}"
+                   HorizontalOptions="Fill"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <!--Asunto-->
+            <Label Text="Asunto"
+                   HorizontalOptions="StartAndExpand"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Editor HorizontalOptions="Fill"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="{Binding Asunto}"
+                    MaxLength="20"/>
+            <!--Mensaje-->
+            <Label Text="Mensaje"
+                   HorizontalOptions="StartAndExpand"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            <Editor MaxLength="100"
+                    HorizontalOptions="Fill"
+                    Text="{Binding Mensaje}"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+            <!--Botones-->
+            <Button Text="Cancelar"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    BorderRadius="3"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{Binding CancelarCommand}"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
+            <Button Text="Enviar"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    BorderRadius="3"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{Binding EnviarCommand}"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+        </Grid>
+    </StackLayout>
+    
+</popup:PopupPage>

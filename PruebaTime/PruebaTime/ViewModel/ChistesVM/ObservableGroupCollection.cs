@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
-namespace PruebaTime.ViewModel.ChistesViewModel
+namespace PruebaTime.ViewModel.ChistesVM
 {
     public class ObservableGroupCollection<S,T> : ObservableCollection<T>
     {

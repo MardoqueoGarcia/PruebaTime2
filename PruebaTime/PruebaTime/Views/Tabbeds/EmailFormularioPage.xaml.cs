@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace PruebaTime.Views.Tabbeds
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DatosPersonalesPage : ContentPage
+	public partial class EmailFormularioPage
 	{
-		public DatosPersonalesPage ()
+		public EmailFormularioPage ()
 		{
 			InitializeComponent ();
 		}
-    }
+	}
 }
