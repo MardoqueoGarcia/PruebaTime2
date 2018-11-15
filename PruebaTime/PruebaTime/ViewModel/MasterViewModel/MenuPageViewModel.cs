@@ -57,6 +57,8 @@ namespace PruebaTime.ViewModel.MasterViewModel
                     break;
 
                 case "CalculatorPage":
+                    //Instancia de la calculadora
+                    SingletonViewModel.GetInstance().Calculator = new CalculadoraVM.CalculadoraViewModel();
                     App.Master.Detail = new NavigationPage(new CalculatorPage());
                     break;
 

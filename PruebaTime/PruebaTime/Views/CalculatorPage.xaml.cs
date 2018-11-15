@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using Plugin.Media;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +19,7 @@ namespace PruebaTime.Views
 		public CalculatorPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            
+        }
+    }
 }

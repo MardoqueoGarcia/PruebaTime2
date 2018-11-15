@@ -1,6 +1,7 @@
 ﻿using PruebaTime.Models;
 using PruebaTime.Repository;
 using PruebaTime.Repository.ChistesVM;
+using PruebaTime.ViewModel.CalculadoraVM;
 using PruebaTime.ViewModel.ChistesVM;
 using PruebaTime.ViewModel.TabbedsViewModels;
 using PruebaTime.Views.Master;
@@ -59,6 +60,13 @@ namespace PruebaTime.ViewModel.MasterViewModel
 
         //Instancia de nuestro buscador
         public SearchViewModel Search
+        {
+            get;
+            set;
+        }
+
+        //Instancia de la calculator
+        public CalculadoraViewModel Calculator
         {
             get;
             set;

@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaTime.Views.CalculatorPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Calculadora">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Calculadora"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BindingContext="{Binding Calculator}"
+                     Padding="10"
+                     Spacing="5">
+            <Label Text="Hola"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
