@@ -5,10 +5,14 @@
              BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Calculadora">
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Calculator}"
-                     Padding="10"
-                     Spacing="5">
-            <Label Text="Hola"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout BindingContext="{Binding Calculator}">
+                
+                <Label Text="Ruta foto"
+                       TextColor="Red"/>
+                
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -2,12 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaTime.Views.SettingsPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Configuraciones">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Estas en las configuraciones"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BindingContext="{Binding Settings}">
+            <!--Mostrar imagen-->
+            <Image Source="{Binding RutaFoto}"
+                       Aspect="AspectFit"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="StartAndExpand"
+                       HeightRequest="100"/>
+            <Label Text="Ruta foto"
+                       TextColor="Red"/>
+            <Label Text="{Binding RutaFoto}"
+                       LineBreakMode="WordWrap"
+                       TextColor="Blue"
+                       FontAttributes="Bold"/>
+            <!--Boton de seleccioanr imagen-->
+            <Button Text="Seleccionar imagen"
+                        TextColor="White"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Command="{Binding SeleccionarFotoCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

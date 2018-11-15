@@ -3,6 +3,7 @@ using PruebaTime.Repository;
 using PruebaTime.Repository.ChistesVM;
 using PruebaTime.ViewModel.CalculadoraVM;
 using PruebaTime.ViewModel.ChistesVM;
+using PruebaTime.ViewModel.Servicios;
 using PruebaTime.ViewModel.TabbedsViewModels;
 using PruebaTime.Views.Master;
 using System;
@@ -67,6 +68,20 @@ namespace PruebaTime.ViewModel.MasterViewModel
 
         //Instancia de la calculator
         public CalculadoraViewModel Calculator
+        {
+            get;
+            set;
+        }
+
+        //Instancia del servicio Foto
+        public ServicioFoto servicioFoto
+        {
+            get;
+            set;
+        }
+
+        //Instancia de settings
+        public SettingsViewModels Settings
         {
             get;
             set;

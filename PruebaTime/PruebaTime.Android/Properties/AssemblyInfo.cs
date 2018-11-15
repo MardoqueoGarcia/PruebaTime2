@@ -32,3 +32,7 @@ using Android.App;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+//Permiso a la camara
+[assembly: UsesPermission(Android.Manifest.Permission.Camera)]
+//Permiso a la galeria de fotos
+[assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
