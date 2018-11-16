@@ -54,8 +54,8 @@ namespace PruebaTime.ViewModel.TabbedsViewModels
         //Metodo del foto
         public void Photo()
         {
-            App.Current.MainPage.DisplayAlert
-                ("Error", "Foto no disponible. Por favor intentelo más tarde", "Aceptar");
+            var mensaje = "No hay imagen disponible :( Por favor intentalo más tarde.";
+            DependencyService.Get<IMessage>().LongTime(mensaje);
         }
 
         //Metodo de la direccion 

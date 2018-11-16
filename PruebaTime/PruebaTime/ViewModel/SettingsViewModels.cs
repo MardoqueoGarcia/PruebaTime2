@@ -1,4 +1,5 @@
 ﻿using Plugin.Media.Abstractions;
+using PruebaTime.ViewModel.MasterViewModel;
 using PruebaTime.ViewModel.Servicios;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,20 @@ using Xamarin.Forms;
 
 namespace PruebaTime.ViewModel
 {
-    public class SettingsViewModels : BindableObject
+    public class SettingsViewModels :  BindableObject
     {
+        #region csontructor
+        public SettingsViewModels()
+        {
+        }
+        #endregion
+
+        #region Attributes
+        private MediaFile Foto;
+        #endregion
+
+        #region Properties
+
         //Ruta de la foto
         public static readonly BindableProperty RutaFotoproperty =
             BindableProperty.Create
@@ -30,8 +43,9 @@ namespace PruebaTime.ViewModel
                 SetValue(RutaFotoproperty, value);
             }
         }
-
-        private MediaFile Foto;
+        #endregion
+        
+        #region Commands
         //Comando de seleccionar una foto
         public Command m_seleccionarFotoCommand;
         public Command SeleccionarFotoCommand
@@ -42,11 +56,14 @@ namespace PruebaTime.ViewModel
                     new Command(async () => await SeleccionarFotoAsync())));
 
             }
-        }
+        } 
+        #endregion
 
+        #region Methods
         //Metodo del comando seleccionar foto
         public async Task<bool> SeleccionarFotoAsync()
         {
+
             int nErrores = 0;
             try
             {
@@ -55,6 +72,7 @@ namespace PruebaTime.ViewModel
                 {
                     RutaFoto = Foto.Path;
                 }
+
             }
             catch (Exception ex)
             {
@@ -63,11 +81,7 @@ namespace PruebaTime.ViewModel
             }
 
             return (nErrores == 0);
-        }
-
-        public SettingsViewModels()
-        {
-
-        }
+        } 
+        #endregion
     }
 }

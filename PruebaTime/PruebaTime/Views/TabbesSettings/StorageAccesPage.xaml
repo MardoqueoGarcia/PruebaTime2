@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaTime.Views.TabbesSettings.StorageAccesPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
+             Title="Galeria">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BindingContext="{Binding Settings}"
+                         Padding="5">
+                <Label Text="Elige una foto de tu galeria:"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       LineBreakMode="WordWrap"
+                       Font="16"/>
+
+                <!--Mostrar imagen-->
+                <ScrollView Orientation="Vertical">
+                    <Image Source="{Binding RutaFoto}"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </ScrollView>
+
+                <Label Text="Ruta foto"
+                       TextColor="Red"/>
+                <Label Text="{Binding RutaFoto}"
+                       LineBreakMode="WordWrap"
+                       TextColor="Blue"
+                       FontAttributes="Bold"/>
+                <!--Boton de seleccionar imagen-->
+                <Button Text="Seleccionar imagen"
+                        TextColor="White"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Command="{Binding SeleccionarFotoCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

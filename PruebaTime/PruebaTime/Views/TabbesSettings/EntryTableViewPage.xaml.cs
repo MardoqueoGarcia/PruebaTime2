@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PruebaTime.Views
+namespace PruebaTime.Views.TabbesSettings
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SettingsPage : TabbedPage
+	public partial class EntryTableViewPage : ContentPage
 	{
-		public SettingsPage ()
+		public EntryTableViewPage ()
 		{
 			InitializeComponent ();
 		}
-    }
+	}
 }

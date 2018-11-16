@@ -38,7 +38,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Command="{Binding CancelarCommand}"
                     Grid.Row="1"
-                    Grid.Column="0"/>
+                    Grid.Column="1"/>
             <Button Text="Enviar"
                     TextColor="White"
                     BackgroundColor="Green"
@@ -46,7 +46,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Command="{Binding EnviarCommand}"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="0"/>
         </Grid>
     </StackLayout>
     

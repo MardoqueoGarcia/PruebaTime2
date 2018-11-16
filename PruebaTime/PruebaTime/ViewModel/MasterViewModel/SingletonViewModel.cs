@@ -87,6 +87,13 @@ namespace PruebaTime.ViewModel.MasterViewModel
             set;
         }
 
+        //Instancia de Inicio
+        public InicioViewModels Inicio
+        {
+            get;
+            set;
+        }
+
         //Instancia de las Paginas de las tabbed
         public DatosPersViewModel DatosPersonales
         {
@@ -117,6 +124,7 @@ namespace PruebaTime.ViewModel.MasterViewModel
             this.Menu = new MainPageViewModel();
             this.Search = new SearchViewModel();
             this.Repository = new ChistesRepository();
+            this.Inicio = new InicioViewModels();
 
         }
         #endregion

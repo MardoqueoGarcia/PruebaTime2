@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaTime.Views.TabbesSettings.SettingsTableViewPage"
+             Title="IntentSettings">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <TableView Intent="Settings"
+                       BackgroundColor="Green">
+                <TableRoot>
+                    <!--Primera Seccion-->
+                    <TableSection Title="Notificaciones">
+                        <TextCell Text="Mardoqueo Garcia" 
+                                   Detail="Usuario"
+                                   DetailColor="Red"/>
+                        <EntryCell Label="Entry Label"
+                                   Text="Entry Text"
+                                   LabelColor="Red"/>
+                        <SwitchCell Text="Recibir Notificaciones"/>
+                        <ImageCell Text="Menu"
+                                   Detail="Navegar al menu"
+                                   DetailColor="Red"
+                                   ImageSource="ic_home.png"/>
+                    </TableSection>
+                    <!--Seccion Dos-->
+                    <TableSection Title="Sonidos">
+                        <TextCell Text="Estas en los sonidos" 
+                                  Detail="Sonidos Fuertes"
+                                  DetailColor="Red"/>
+                        <EntryCell Label="Sugerencias"
+                                   Placeholder="Sugerencias"
+                                   LabelColor="Red"/>
+                        <SwitchCell Text="Modificar Sonidos"/>
+                        <ImageCell Text="Menu"
+                                   Detail="Navegar al menu"
+                                   DetailColor="Red"
+                                   ImageSource="ic_home.png">
+                        </ImageCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

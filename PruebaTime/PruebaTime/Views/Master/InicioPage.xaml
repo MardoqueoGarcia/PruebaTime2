@@ -2,12 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaTime.Views.Master.InicioPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Inicio">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Pagina de Inicio"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+        <StackLayout BindingContext="{Binding Inicio}">
+                <Label Text="Inicio"
+                       VerticalOptions="Center"
+                       Font="20"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

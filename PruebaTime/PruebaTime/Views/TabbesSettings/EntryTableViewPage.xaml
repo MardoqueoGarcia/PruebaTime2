@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaTime.Views.TabbesSettings.EntryTableViewPage"
+             Title="EntryCell">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <TableView BackgroundColor="Green">
+                <TableRoot>
+                    <!--Entrys Keyboards-->
+                    <TableSection Title="Keyboards">
+                        <EntryCell Label="Default: " 
+                                   LabelColor="Black"
+                                   Placeholder="Default"/>
+                        <EntryCell Label="Chat: " 
+                                   Placeholder="omg, que, tal"
+                                   LabelColor="Black"
+                                   Keyboard="Chat"/>
+                        <EntryCell Label="Email: "
+                                   Placeholder="sales@gmail.com"
+                                   LabelColor="Black"
+                                   Keyboard="Email"/>
+                        <EntryCell Label="Numeric: " 
+                                   Placeholder="546"
+                                   LabelColor="Black"
+                                   Keyboard="Numeric"/>
+                        <EntryCell Label="Telephone: " 
+                                   Placeholder="+503 7878-7878"
+                                   LabelColor="Black"
+                                   Keyboard="Telephone"/>
+                        <EntryCell Label="Text: " 
+                                   Placeholder="text"
+                                   LabelColor="Black"
+                                   Keyboard="Text"/>
+                        <EntryCell Label="Url: "
+                                   Placeholder="http://developer.xamarin.com"
+                                   LabelColor="Black"
+                                   Keyboard="Url"/>
+                    </TableSection>
+                    <!--Entrys Colors-->
+                    <TableSection Title="States Colors">
+                        <EntryCell Label="Colorful:"
+                                   Placeholder="text"
+                                   LabelColor="Red"/>
+                        <EntryCell Label="Disable: "
+                                   Placeholder="text"
+                                   LabelColor="Red"
+                                   IsEnabled="False"/>
+                        <EntryCell Label="Colorful + Disable: "
+                                   Placeholder="text"
+                                   IsEnabled="False"
+                                   LabelColor="Red"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
