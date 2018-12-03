@@ -1,14 +1,8 @@
-﻿using Plugin.Media.Abstractions;
-using PruebaTime.ViewModel.CalculadoraVM;
-using PruebaTime.ViewModel.ChistesVM;
+﻿using PruebaTime.ViewModel.ChistesVM;
 using PruebaTime.ViewModel.TabbedsViewModels;
 using PruebaTime.Views;
 using PruebaTime.Views.Master;
 using PruebaTime.Views.Tabbeds;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -54,6 +48,7 @@ namespace PruebaTime.ViewModel.MasterViewModel
                 case "HomeTabbedPage":
                     //Instanciamos los datos
                     SingletonViewModel.GetInstance().DatosPersonales = new DatosPersViewModel();
+                    SingletonViewModel.GetInstance().Pasatiempos = new PasatiemposViewModel();
                     App.Master.Detail = new NavigationPage(new HomeTabbedPage());
                     break;
 

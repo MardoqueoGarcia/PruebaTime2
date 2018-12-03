@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PruebaTime.Views.Tabbeds.PasatiemposPage"
+             BindingContext="{Binding Singleton, Source={StaticResource Locator}}"
              Title="Juegos"
              Icon="ic_pasatiempos">
     <ContentPage.Content>
-        <StackLayout Padding="3">
+        <StackLayout Padding="3"
+                     BindingContext="{Binding Pasatiempos}">
             <Frame OutlineColor="Black"
                    BorderColor="Black"
                    CornerRadius="2"
@@ -17,6 +19,50 @@
                        HeightRequest="80"
                        HorizontalOptions="FillAndExpand"/>
             </Frame>
+            
+            <!--Inicio del Juego-->
+            <StackLayout Padding="3">
+                <Label Text="Adivina un numero randow del 1 al 30:"
+                       TextColor="Black"
+                       LineBreakMode="WordWrap"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="StartAndExpand"
+                       FontSize="Medium"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Escriba un número:"
+                           TextColor="Red"
+                           Font="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           VerticalOptions="CenterAndExpand"/>
+                    <Entry Placeholder="número"
+                           Keyboard="Numeric"
+                           Text="{Binding Number}"
+                           PlaceholderColor="Black"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Button Text="Adivinar número"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        BorderRadius="2"
+                        Command="{Binding NumberCommand}"/>
+                <Label Text="{Binding Resultado}"
+                       FontAttributes="Bold"
+                       TextColor="Red"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="EndAndExpand"
+                       Font="18"/>
+                <Label Text="{Binding Intent}"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="EndAndExpand"
+                       Font="18"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

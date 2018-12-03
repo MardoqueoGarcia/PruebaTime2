@@ -1,14 +1,11 @@
 ﻿using PruebaTime.Models;
-using PruebaTime.Repository;
 using PruebaTime.Repository.ChistesVM;
 using PruebaTime.ViewModel.CalculadoraVM;
 using PruebaTime.ViewModel.ChistesVM;
 using PruebaTime.ViewModel.Servicios;
 using PruebaTime.ViewModel.TabbedsViewModels;
 using PruebaTime.Views.Master;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PruebaTime.ViewModel.MasterViewModel
 {
@@ -110,6 +107,11 @@ namespace PruebaTime.ViewModel.MasterViewModel
             get;
             set;
         }
+        public PasatiemposViewModel Pasatiempos
+        {
+            get;
+            set;
+        }
         #endregion
 
 
@@ -118,14 +120,12 @@ namespace PruebaTime.ViewModel.MasterViewModel
         {
             //Utilizaremos nuestra instancia de neustro Singleton
             instance = this;
-
-
+            
             this.Login = new LoginPage();
             this.Menu = new MainPageViewModel();
             this.Search = new SearchViewModel();
             this.Repository = new ChistesRepository();
             this.Inicio = new InicioViewModels();
-
         }
         #endregion
 
@@ -138,7 +138,6 @@ namespace PruebaTime.ViewModel.MasterViewModel
             {
                 return new SingletonViewModel();
             }
-
             return instance;
         }
         #endregion
